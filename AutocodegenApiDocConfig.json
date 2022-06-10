@@ -1,0 +1,717 @@
+
+
+
+{
+    "autocodegen": "1.0",
+    "info": {
+        "title": "iot_application_manager_r",
+        "description": "This is a simple example NodeJS API project to demonstrate AutoCodeGen Documentation",
+        "version": "1.0.0",
+        "contact": {
+            "email": "abc@autocodegen.com"
+        }
+    },
+    "schemes": ["http"],
+    "host": "http://localhost:7080",
+    "baseRoute": "/",
+     "routes" : [
+             {
+        "routeName" : "/temperature_sensor_monitoring/post_temperature_sensor_monitoring_data",
+        "method" : "post",    
+        "description": "post_temperature_sensor_monitoring_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+            
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                      "unique_temp_sensor_id" : "<String>"           
+     ,
+          "deployment_id" : "<String>"           
+     ,
+          "deployment_date" : "<Date>"           
+     ,
+          "temp_sensor_in_degree_celcius" : "<Number>"           
+     ,
+          "meta_data" : "<{}>"           
+                 }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/temperature_sensor_monitoring/get_one_temperature_sensor_monitoring_data",
+        "method" : "get",    
+        "description": "get_one_temperature_sensor_monitoring_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+     "unique_temp_sensor_id" : "req.query.unique_temp_sensor_id"        }
+        },{
+            "type" : "body",
+            "content" :{}  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                      "unique_temp_sensor_id" : "<String>",                      "deployment_id" : "<String>",                      "deployment_date" : "<Date>",                      "temp_sensor_in_degree_celcius" : "<Number>",                      "meta_data" : "<{}>"                                     }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/temperature_sensor_monitoring/get_all_temperature_sensor_monitoring_data",
+        "method" : "get",    
+        "description": "get_all_temperature_sensor_monitoring_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+            }
+        },{
+            "type" : "body",
+            "content" :{}  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                      "unique_temp_sensor_id" : "<String>",                      "deployment_id" : "<String>",                      "deployment_date" : "<Date>",                      "temp_sensor_in_degree_celcius" : "<Number>",                      "meta_data" : "<{}>"                                     }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/temperature_sensor_monitoring/update_one_temperature_sensor_monitoring_data",
+        "method" : "patch",    
+        "description": "temperature_sensor_monitoring_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                "unique_temp_sensor_id" : "req.query.unique_temp_sensor_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                "deployment_id" :  "<String>",                "deployment_date" :  "<Date>",                "temp_sensor_in_degree_celcius" :  "<Number>",                "meta_data" :  "<{}>"                    }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/temperature_sensor_monitoring/delete_one_temperature_sensor_monitoring_data",
+        "method" : "delete",    
+        "description": "delete_one_temperature_sensor_monitoring_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+               "unique_temp_sensor_id" : "req.query.unique_temp_sensor_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        }
+               ,
+
+                 {
+        "routeName" : "/noise_monitoring/post_noise_monitoring_data",
+        "method" : "post",    
+        "description": "post_noise_monitoring_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+            
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                      "unique_noise_sensor_id" : "<String>"           
+     ,
+          "noise_sensor_deployment_id" : "<String>"           
+     ,
+          "noise_sensor_deployment_date" : "<Date>"           
+     ,
+          "noise_sensor_level_in_db" : "<Number>"           
+     ,
+          "noise_sensor_meta_data" : "<{}>"           
+                 }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/noise_monitoring/get_one_noise_monitoring_data",
+        "method" : "get",    
+        "description": "get_one_noise_monitoring_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+     "unique_noise_sensor_id" : "req.query.unique_noise_sensor_id"        }
+        },{
+            "type" : "body",
+            "content" :{}  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                      "unique_noise_sensor_id" : "<String>",                      "noise_sensor_deployment_id" : "<String>",                      "noise_sensor_deployment_date" : "<Date>",                      "noise_sensor_level_in_db" : "<Number>",                      "noise_sensor_meta_data" : "<{}>"                                     }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/noise_monitoring/get_all_noise_monitoring_data",
+        "method" : "get",    
+        "description": "get_all_noise_monitoring_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+            }
+        },{
+            "type" : "body",
+            "content" :{}  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                      "unique_noise_sensor_id" : "<String>",                      "noise_sensor_deployment_id" : "<String>",                      "noise_sensor_deployment_date" : "<Date>",                      "noise_sensor_level_in_db" : "<Number>",                      "noise_sensor_meta_data" : "<{}>"                                     }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/noise_monitoring/update_one_noise_monitoring_data",
+        "method" : "patch",    
+        "description": "noise_monitoring_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                "unique_noise_sensor_id" : "req.query.unique_noise_sensor_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                "noise_sensor_deployment_id" :  "<String>",                "noise_sensor_deployment_date" :  "<Date>",                "noise_sensor_level_in_db" :  "<Number>",                "noise_sensor_meta_data" :  "<{}>"                    }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/noise_monitoring/delete_one_noise_monitoring_data",
+        "method" : "delete",    
+        "description": "delete_one_noise_monitoring_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+               "unique_noise_sensor_id" : "req.query.unique_noise_sensor_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        }
+               ,
+
+                 {
+        "routeName" : "/pollution_monitoring/post_pollution_monitoring_data",
+        "method" : "post",    
+        "description": "post_pollution_monitoring_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+            
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                      "unique_pollution_sensor_id" : "<String>"           
+     ,
+          "pollution_sens_deployment_id" : "<String>"           
+     ,
+          "pollution_sensor_value" : "<Number>"           
+     ,
+          "pollution_sensor_meta_data" : "<{}>"           
+                 }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/pollution_monitoring/get_one_pollution_monitoring_data",
+        "method" : "get",    
+        "description": "get_one_pollution_monitoring_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+     "unique_pollution_sensor_id" : "req.query.unique_pollution_sensor_id"        }
+        },{
+            "type" : "body",
+            "content" :{}  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                      "unique_pollution_sensor_id" : "<String>",                      "pollution_sens_deployment_id" : "<String>",                      "pollution_sensor_value" : "<Number>",                      "pollution_sensor_meta_data" : "<{}>"                                     }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/pollution_monitoring/get_all_pollution_monitoring_data",
+        "method" : "get",    
+        "description": "get_all_pollution_monitoring_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+            }
+        },{
+            "type" : "body",
+            "content" :{}  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                      "unique_pollution_sensor_id" : "<String>",                      "pollution_sens_deployment_id" : "<String>",                      "pollution_sensor_value" : "<Number>",                      "pollution_sensor_meta_data" : "<{}>"                                     }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/pollution_monitoring/update_one_pollution_monitoring_data",
+        "method" : "patch",    
+        "description": "pollution_monitoring_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                "unique_pollution_sensor_id" : "req.query.unique_pollution_sensor_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                "pollution_sens_deployment_id" :  "<String>",                "pollution_sensor_value" :  "<Number>",                "pollution_sensor_meta_data" :  "<{}>"                    }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+     {
+        "routeName" : "/pollution_monitoring/delete_one_pollution_monitoring_data",
+        "method" : "delete",    
+        "description": "delete_one_pollution_monitoring_data",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+               "unique_pollution_sensor_id" : "req.query.unique_pollution_sensor_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        }
+         
+
+
+     ]
+
+
+
+,
+ "customRoutes" : [
+             {
+        "routeName" : "/temperature_sensor_monitoring/update_one_meta_data_by_unique_temp_sensor_id",
+        "method" : "patch",    
+        "description": "update_one_meta_data_by_unique_temp_sensor_id",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                  "unique_temp_sensor_id" : "req.query.unique_temp_sensor_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                 
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                   "meta_data" : "meta_data_value"
+                    }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        },
+         {
+        "routeName" : "/temperature_sensor_monitoring/get_one_meta_data_by_unique_temp_sensor_id",
+        "method" : "get",    
+        "description": "get_one_meta_data_by_unique_temp_sensor_id",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                  "unique_temp_sensor_id" : "req.query.unique_temp_sensor_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                 
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                   "meta_data" : "meta_data_value"
+                    }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        }
+       ,{
+        "routeName" : "/temperature_sensor_monitoring/get_count_of_deployment_id",
+        "method" : "get",    
+        "description": "get_count_of_deployment_id",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                  "deployment_id" : "req.query.unique_temp_sensor_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                 
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" : {"<Response>" : "Number"}
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        }
+         ,{
+        "routeName" : "/noise_monitoring/update_one_noise_sensor_meta_data_by_unique_noise_sensor_id",
+        "method" : "patch",    
+        "description": "update_one_noise_sensor_meta_data_by_unique_noise_sensor_id",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                  "unique_noise_sensor_id" : "req.query.unique_noise_sensor_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                 
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                   "noise_sensor_meta_data" : "noise_sensor_meta_data_value"
+                    }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        }
+         ,{
+        "routeName" : "/noise_monitoring/get_one_noise_sensor_meta_data_by_unique_noise_sensor_id",
+        "method" : "get",    
+        "description": "get_one_noise_sensor_meta_data_by_unique_noise_sensor_id",
+        "produces": "application/json",
+        "headers" : [],
+        "parameters": [{
+            "type" : "query",
+            "content" :{
+                  "unique_noise_sensor_id" : "req.query.unique_noise_sensor_id"
+            }
+        },{
+            "type" : "body",
+            "content" :{
+                 
+            }  
+        }],
+        "responses": 
+            [{
+                "statusCode" : 200,
+                "description" : "Successful response",
+                "returns" : {
+                    "success" : true,
+                    "message" :{
+                   "noise_sensor_meta_data" : "noise_sensor_meta_data_value"
+                    }
+                }
+            },
+            {
+                "statusCode" : 400,
+                "description" : "Error",
+                "returns" : {
+                    "success" : false
+                }
+            }]
+        }
+            
+ ]
+        
+ }
