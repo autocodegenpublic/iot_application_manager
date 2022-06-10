@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 exports.createJWT = (payload) => 
 {
   
-   return jwt.sign(payload, "partOfTheJourneyIsTheEnd", {
+   return jwt.sign(payload, "your_key", {
      expiresIn: "1 day",
    });
 };
@@ -14,7 +14,7 @@ exports.createJWT = (payload) =>
   
   try{
    console.log("Hello " + req.query.jwtToken);
-   jwt.verify(req.query.jwtToken, "partOfTheJourneyIsTheEnd");
+   jwt.verify(req.query.jwtToken, "your_key");
    next();
   }
   catch(e)
